@@ -1,0 +1,299 @@
+/*
+style.css 
+:root{
+  --dark: #232426;
+  --accent: #eceff1;    
+  --light: #fbfbfb;
+  --accent-2: #e9eef2;
+}
+
+*{box-sizing: border-box}
+body{
+  margin:0;
+  font-family: "Open Sans", Arial, sans-serif;
+  background: var(--light);
+  color: #222;
+}
+
+/* Hero container - chia 3 vùng: left | center ( nội dung ) | right 
+.hero{
+  display: grid;
+  grid-template-columns: 1fr minmax(420px, 900px) 1fr; /* center có giới hạn chiều rộng 
+  align-items: center;
+  height: 240px; 
+  position: relative;
+  overflow: visible;
+}
+
+/* nền trái và phải *
+.hero-left{
+  background: var(--dark);
+  height:100%;
+}
+.hero-right{
+  background: linear-gradient(90deg, var(--light), #f5f7f9);
+  height:100%;
+}
+
+/* vùng giữa: dải ngang để chứa avatar + text 
+.hero-center{
+  background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(245,247,249,0.95));
+  height: 120px;
+  margin: 0 0; /* giữ dải nằm giữa 
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding: 18px 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transform: translateY(0%); /* có thể dịch lên/xuống 
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-card{
+    display:flex;
+    align-items: center;
+    backgournd: linear-gradient(to right, #e0e0e0 50%,#f5f5f5 50%);
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* Avatar wrap: tạo 1 vòng border lớn hơn để giống khung 
+.avatar-wrap{
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f5f7f9, #e9eef2);  vòng viền ngoài */
+  /*
+  padding: 6px;  khoảng giữa viền ngoài và ảnh
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  margin-left: -60px; 
+}
+
+/*avatar thực tế 
+.avatar{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border:6px solid #d3d3d3;
+  box-shadow: 0 0 0 12px #ffffff;
+  display:block;
+  background: #ddd;
+}
+
+/* text phần tên và tiêu đề 
+.hero-text{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding-left: 6px;
+}
+
+.name{
+  font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin:0;
+  color: #111;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.title{
+  margin:0;
+  color: #6b7280;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+ */
+/* Thêm vào phần <style> hoặc file CSS riêng 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.name {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.title {
+    text-align: center;
+    color: #f59e0b;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.section-title {
+    background: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-item, .education-item, .skill-item {
+    margin: 5px 0;
+}
+
+.skill-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #f59e0b;
+    text-align: right;
+    color: white;
+    padding-right: 5px;
+    transition: width 1s ease-in-out;
+    border-radius: 5px;
+}
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.soft-skill {
+    background: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+/* Thêm vào phần <style> hoặc file CSS riêng */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.name {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.title {
+    text-align: center;
+    color: #f59e0b;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.section-title {
+    background: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-item, .education-item, .skill-item {
+    margin: 5px 0;
+}
+
+.skill-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #f59e0b;
+    text-align: right;
+    color: white;
+    padding-right: 5px;
+    transition: width 2ms ease-in-out;
+    border-radius: 5px;
+}
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.soft-skill {
+    background: #f59e0b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
